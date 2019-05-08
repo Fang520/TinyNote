@@ -16,6 +16,7 @@ type
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure RxTrayIcon1DblClick(Sender: TObject);
     procedure N1Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -43,6 +44,11 @@ end;
 procedure TfrmMain.N1Click(Sender: TObject);
 begin
   Application.Terminate;
+end;
+
+procedure TfrmMain.FormCreate(Sender: TObject);
+begin
+  SetWindowLong(Application.Handle, GWL_EXSTYLE, WS_EX_TOOLWINDOW);
 end;
 
 end.
