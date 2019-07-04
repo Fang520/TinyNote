@@ -1138,4 +1138,10 @@ object frmMain: TfrmMain
       OnClick = N1Click
     end
   end
+  object Timer1: TTimer
+    Interval = 30000
+    OnTimer = Timer1Timer
+    Left = 120
+    Top = 24
+  end
 end
